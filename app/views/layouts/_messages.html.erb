@@ -1,14 +1,9 @@
 <% if flash.count > 0 %>
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-      <% flash.each do |name, msg| %>
-      <div class="alert alert-success" role="alert">
-
-          <a href="#" class="close" data-dismiss="alert">&#215;</a>
-          <%= msg %>
-
-        <% end %>
-      </div>
-    </div>
+  <div class="alert alert-success" role="alert">
+    <% flash.each do |name, msg| %>
+    <ul>
+      <li><%= msg %></li>
+    </ul>
+    <% end %>
   </div>
 <% end %>
