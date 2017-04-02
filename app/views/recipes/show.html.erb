@@ -5,6 +5,9 @@
     <strong>Steps: </strong>
   </h4>
   <%= simple_format(@recipe.description) %>
+  <% if @recipe.ingredients.any? %>
+     <p>Ingredients: <%= render @recipe.ingredients %> </p>
+  <% end %>
   <div class="pull-right">
     <p class="center">
 
