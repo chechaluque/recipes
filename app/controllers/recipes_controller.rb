@@ -12,6 +12,8 @@ class RecipesController < ApplicationController
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    @comment = Comment.new
+    @comments = @recipe.comments.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /recipes/new
