@@ -33,6 +33,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'redis'
   gem 'rails_12factor'
 
 end
