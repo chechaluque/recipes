@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
   root 'pages#home'
   resources :ingredients, except: [:destroy]
+
+  mount ActionCable.server => '/cable'
 end
